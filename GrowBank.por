@@ -9,7 +9,7 @@ programa
 		
 	funcao inicio(){
 	     faca{
-	     	        escreva("\n--------------------------------")
+	     	escreva("\n--------------------------------")
 			escreva("\n-Seja Bem-Vindo(a) ao GrowBank -")
 			escreva("\n--------------------------------")
 			escreva("\n- 1 - Visualizar saldo         -")
@@ -31,7 +31,7 @@ programa
 				pare
 				caso 4: fazer_transferencia()
 				pare
-				caso 5: escreva("GrowBank agradece a preferência!")
+				caso 5: escreva("GrowBank agradece a preferência!\n\n")
 				pare
 				caso contrario: 
 				escreva("Opção inválida! Tente novamente.\n")
@@ -42,11 +42,12 @@ programa
 
 	funcao verificar_saldo(){			
 		faca{
-			escreva("\nAgencia 0001-1 C/C 123456-7") 
-			escreva("\nSaldo:             G$" + saldo)
-			escreva("\nLimite cheque especial:   G$" + chequeespecial)
+			escreva("\nAgencia 0001-1 C/C 123456-7\n")
+			escreva("Cliente Especial: Carlos Fernandes\n\n") 
+			escreva("\nSaldo: G$ " + saldo)
+			escreva("\nCheque especial: G$ " + chequeespecial)
 			escreva("\n---------------------------")
-			escreva("\nTotal:             G$" + saldo_total)
+			escreva("\nTotal: G$ " + saldo_total)
 			escreva("\nVoltar ao Menu [S|N] ")
 			leia(voltar)
 			limpa()
@@ -78,9 +79,9 @@ programa
 			saldo_total = saldo + chequeespecial
 			escreva("Depósito efetuado!")
 			escreva("\n---------------------------")
-			escreva("\nSaldo:             G$" + saldo)
-			escreva("\nchequeespecial:    G$" + chequeespecial)
-			escreva("\nTotal:             G$" + saldo_total)
+			escreva("\nSaldo:             G$ " + saldo)
+			escreva("\nchequeespecial:    G$ " + chequeespecial)
+			escreva("\nTotal:             G$ " + saldo_total)
 			escreva("\n---------------------------")
 			escreva("\nDeseja realizar outro depósito? [S|N] ")
 			leia(voltar)
@@ -109,9 +110,9 @@ programa
 			saldo_total = saldo + chequeespecial
 			escreva("Saque efetuado!")
 			escreva("\n---------------------------")
-			escreva("\nSaldo:             G$" + saldo)
-			escreva("\nchequeespecial:    G$" + chequeespecial)
-			escreva("\nTotal:             G$" + saldo_total)
+			escreva("\nSaldo:             G$ " + saldo)
+			escreva("\nchequeespecial:    G$ " + chequeespecial)
+			escreva("\nTotal:             G$ " + saldo_total)
 			escreva("\n---------------------------")
 			escreva("\nDeseja realizar outro saque? [S|N] ")
 			leia(voltar)
@@ -139,9 +140,9 @@ programa
 			saldo_total = saldo + chequeespecial
 			escreva("Transferência efetuada para conta número " + nome_transf + "!")
 			escreva("\n---------------------------")
-			escreva("\nSaldo:             G$" + saldo)
-			escreva("\nchequeespecial:    G$" + chequeespecial)
-			escreva("\nTotal:             G$" + saldo_total)
+			escreva("\nSaldo:             G$ " + saldo)
+			escreva("\nchequeespecial:    G$ " + chequeespecial)
+			escreva("\nTotal:             G$ " + saldo_total)
 			escreva("\n---------------------------")
 			escreva("\nDeseja realizar outra transferência? [S|N] ")
 			leia(voltar)

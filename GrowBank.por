@@ -2,7 +2,7 @@ programa
 {	
 //Aluno Carlos Fernandes
 	
-	real saldo = 0.0, deposito, saque, taxa_saque = 2.5, transferencia, taxa_transferencia = 4.5, growcash = 500.0
+	real saldo = 0.0, deposito, saque, taxa_saque = 2.5, transferencia, taxa_transferencia = 4.5, chequeespecial = 500.0
 	real saldo_total = saldo + growcash, diferenca_saque, diferenca_deposito, diferenca_transf
 	inteiro opcao_menu
 	cadeia voltar, nome_transf
@@ -43,10 +43,10 @@ programa
 	funcao verificar_saldo(){			
 		faca{
 			escreva("\nAgencia 0001-1 C/C 123456-7") 
-			escreva("\nSaldo:             R$" + saldo)
-			escreva("\nLimite Growcash:   R$" + growcash)
+			escreva("\nSaldo:             G$" + saldo)
+			escreva("\nLimite chequeespecial:   G$" + chequeespecial)
 			escreva("\n---------------------------")
-			escreva("\nTotal:             R$" + saldo_total)
+			escreva("\nTotal:             G$" + saldo_total)
 			escreva("\nVoltar ao Menu [S|N] ")
 			leia(voltar)
 			limpa()
@@ -64,23 +64,23 @@ programa
 				escreva("\nErro: 001> Favor conferir o valor do deposito.")
 				pare
 			}
-			se(growcash < 500){
-				growcash = growcash + deposito
-				se(growcash >= 500){
-					diferenca_deposito = growcash - 500
-					growcash = 500.0
+			se(chequeespecial < 500){
+				chequeespecial = chequeespecial + deposito
+				se(chequeespecial >= 500){
+					diferenca_deposito = chequeespecial - 500
+					chequeespecial = 500.0
 					saldo = saldo + diferenca_deposito
 				}
 			}
 			senao{
 				saldo = saldo + deposito
 			}
-			saldo_total = saldo + growcash
+			saldo_total = saldo + chequeespecial
 			escreva("Depósito efetuado!")
 			escreva("\n---------------------------")
-			escreva("\nSaldo:             R$" + saldo)
-			escreva("\nGrowcash:          R$" + growcash)
-			escreva("\nTotal:             R$" + saldo_total)
+			escreva("\nSaldo:             G$" + saldo)
+			escreva("\nchequeespecial:          G$" + chequeespecial)
+			escreva("\nTotal:             G$" + saldo_total)
 			escreva("\n---------------------------")
 			escreva("\nDeseja realizar outro depósito? [S|N] ")
 			leia(voltar)
@@ -103,15 +103,15 @@ programa
 			}
 			saldo = saldo - saque - taxa_saque
 			se(saldo < 0){
-				growcash = growcash + saldo
+				growcash = chequeespecial + saldo
 				saldo = 0.0
 			}
-			saldo_total = saldo + growcash
+			saldo_total = saldo + chequeespecial
 			escreva("Saque efetuado!")
 			escreva("\n---------------------------")
-			escreva("\nSaldo:             R$" + saldo)
-			escreva("\nGrowcash:          R$" + growcash)
-			escreva("\nTotal:             R$" + saldo_total)
+			escreva("\nSaldo:             G$" + saldo)
+			escreva("\nchequeespecial:          G$" + chequeespecial)
+			escreva("\nTotal:             G$" + saldo_total)
 			escreva("\n---------------------------")
 			escreva("\nDeseja realizar outro saque? [S|N] ")
 			leia(voltar)
@@ -136,12 +136,12 @@ programa
 				pare
 			}
 			saldo = saldo - transferencia - taxa_transferencia
-			saldo_total = saldo + growcash
+			saldo_total = saldo + chequeespecial
 			escreva("Transferência efetuada para conta número " + nome_transf + "!")
 			escreva("\n---------------------------")
-			escreva("\nSaldo:             R$" + saldo)
-			escreva("\nGrowcash:          R$" + growcash)
-			escreva("\nTotal:             R$" + saldo_total)
+			escreva("\nSaldo:             G$" + saldo)
+			escreva("\nchequeespecial:          G$" + chequeespecial)
+			escreva("\nTotal:             G$" + saldo_total)
 			escreva("\n---------------------------")
 			escreva("\nDeseja realizar outra transferência? [S|N] ")
 			leia(voltar)

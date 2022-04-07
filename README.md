@@ -8,7 +8,7 @@ Desenvolvido um sistema que possibilita as seguintes ações:
 4. Transferir GrowCoins:
 5. Sair do sistema:
 
-Confore abaixo:
+Confore imagem abaixo:
 
 ![image](https://user-images.githubusercontent.com/85653497/161680443-13ad932a-0885-4899-95e6-00e6541fe419.png)
 
